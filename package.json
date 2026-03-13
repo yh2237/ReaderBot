@@ -1,0 +1,27 @@
+{
+  "name": "UheUheVoiceBot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "delete": "node scripts/delete-commands.js",
+    "deploy": "node scripts/deploy-commands.js"
+  },
+  "keywords": [],
+  "author": "yh(yh2237)",
+  "license": "MIT",
+  "type": "commonjs",
+  "dependencies": {
+    "@discordjs/opus": "^0.10.0",
+    "@discordjs/voice": "^0.19.0",
+    "@snazzah/davey": "^0.1.8",
+    "axios": "^1.13.2",
+    "discord.js": "^14.25.1",
+    "dotenv": "^17.2.3",
+    "fs-extra": "^11.3.3",
+    "js-yaml": "^4.1.1",
+    "libsodium-wrappers": "^0.7.15",
+    "node-cron": "^4.2.1",
+    "sqlite3": "^5.1.7"
+  }
+}

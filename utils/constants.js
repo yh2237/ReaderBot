@@ -1,0 +1,12 @@
+const DATABASE_BOOLEAN = {
+    TRUE: 1,
+    FALSE: 0,
+};
+
+const BOT_NOTIFICATION_ID = 'BOT_NOTIFICATION_ID';
+
+
+module.exports = {
+    DATABASE_BOOLEAN,
+    BOT_NOTIFICATION_ID,
+};
