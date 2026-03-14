@@ -1,0 +1,55 @@
+discord_token: ""
+client_id: ""
+
+# 両エンジンが有効な場合に新規ユーザーおよび通知で使用するエンジン
+# "voicevox" または "aivoice" を指定
+# 片方のみ enabled: true の場合はこの設定は無視される
+default_engine: "aivoice"
+
+# --- VOICEVOX 設定 ---
+voicevox:
+  enabled: true
+  engine_urls:
+    - "http://localhost:50022"
+  speaker_source_url: "http://localhost:50022"
+  # 新規ユーザーに割り当てるデフォルト話者ID
+  default_speaker_id: 1
+  # 入退室通知に使用する話者ID。空欄の場合は default_speaker_id を使用
+  notification_speaker_id: 46
+  # 話者変更でエンジンがVOICEVOXに切り替わった時に適用される初期パラメータ
+  default_params:
+    speed_scale: 1.2
+    pitch_scale: 0.0
+    intonation_scale: 1.0
+    volume_scale: 1.0
+
+# --- A.I.VOICE 設定 ---
+aivoice:
+  enabled: true
+  # AI.Talk.Editor.Api.dllの絶対パス
+  dll_path: "C:\\Program Files\\AI\\AIVoice\\AIVoiceEditor\\AI.Talk.Editor.Api.dll"
+  # 接続するホスト名（空欄の場合は利用可能な最初のホストを自動選択）
+  host_name: ""
+  # 新規ユーザーに割り当てるデフォルトボイスプリセット名。空欄の場合は利用可能な最初のプリセットを使用
+  default_voice_preset: ""
+  # 入退室通知に使用するボイスプリセット名。空欄の場合は default_voice_preset を使用
+  notification_voice_preset: ""
+  # 話者変更でエンジンが A.I.VOICE に切り替わった時に適用される初期パラメータ
+  default_params:
+    speed_scale: 1.2
+    pitch_scale: 1.0
+    intonation_scale: 1.0
+    volume_scale: 1.0
+
+database_file: "db/database.db"
+max_message_length: 200
+dictionary_limit_per_guild: 100
+read_urls: false
+audio_cache_limit: 50000
+prefetch_depth: 20
+
+backup:
+  enabled: true
+  destination: "./db_backups"
+  interval_minutes: 60
+  retention_count: 5
